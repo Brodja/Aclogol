@@ -3,12 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Alcogol</title>
   </head>
   <body>
-   <input type="text" id="test_input">
-   <button id="test_btn" onclick="startF()"> Добавить</button>
-<div class="start" id="start">__________________________________________</div>
-    <script src="script.js"></script>
+    <div class="wrapper">
+      <div class="result__btn">
+        <button onclick="calc()">Посчитать</button>
+        <button>Очистить</button>
+      </div>
+      <div class="new__alcogolic">
+        <label for="">Введите имя</label>
+        <input type="text" id="new_name_alcogolic"/>
+        <button id="addNewAclogolic" onclick="createAclogolic()">Добавить алкоголика</button>
+      </div>
+      <div class="add__action">
+        <h3>Добавить операцию</h3>
+        <div class="action__field">
+          <div class="one__field">
+            <label for="enter_id">Введите ИД</label>
+            <input type="text" id="enter_id" />
+          </div>
+          <div class="one__field">
+            <label for="enter_name">Введите имя</label>
+            <input type="text" id="enter_name" />
+          </div>
+          <div class="one__field">
+            <label for="enter_sumP">Введите сумму взноса</label>
+            <input type="text" id="enter_sumP" />
+          </div>
+          <div class="one__field">
+            <label for="enter_sumM">Введите сумму долга</label>
+            <input type="text" id="enter_sumM" />
+          </div>
+          <div class="one__field">
+            <label for="enter_idO">Введите ид собутыльников</label>
+            <input type="text" id="enter_idO" />
+          </div>
+        </div>
+        <button id="btn_add_action" onclick="createOperate()">Добавить</button>
+      </div>
+      <div class="result__field">
+        <h3>Результат</h3>
+        <div class="result_one_aclogolic">
+          <div class="id_box">ID</div>
+          <div class="name_box">Name</div>
+          <div class="name_box">Summa+</div>
+          <div class="name_box">Summa-</div>
+        </div>
+        <div class="root" id="root">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- <input type="text" id="test_input" />
+    <button id="test_btn" onclick="startF()">Добавить</button>
+    <div class="start" id="start">
+      __________________________________________
+    </div> -->
+    <!-- <script src="script.js"></script> -->
+    <script src="index.js"></script>
   </body>
 </html>
